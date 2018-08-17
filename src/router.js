@@ -6,13 +6,34 @@ Vue.use(Router);
 const routes = [
   {
     path: '*',
-    redirect: '/user'
+    redirect: '/home'
   },
   {
     name: 'user',
     component: () => import('./view/user'),
     meta: {
       title: '会员中心'
+    }
+  },
+  {
+    name: 'home',
+    component: () => import('./view/home'),
+    meta: {
+      title: '首页'
+    }
+  },
+  {
+    name: 'recharge',
+    component: () => import('./view/recharge'),
+    meta: {
+      title: '充值页面'
+    }
+  },
+  {
+    name: 'chat',
+    component: () => import('./view/chat'),
+    meta: {
+      title: '客服页面'
     }
   }
 ];
